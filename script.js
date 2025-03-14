@@ -31,12 +31,12 @@ const galleryData = { //upload the images here
         { id: 15, src: './assets/srfrogsen.png', title: 'SrFrogSen' }
     ],
     cute: [
-        { id: 3, src: './assets/furry.png', title: 'Pony' },
-        { id: 4, src: './assets/furry2.png', title: 'Furry' }
+        { id: 3, src: './assets/furry.png', title: 'Muffin' },
+        { id: 4, src: './assets/furry2.png', title: 'Protogen' }
     ],
     couples: [
         { id: 5, src: './assets/couple1.jpg', title: 'Sinny & Rollback' },
-        { id: 6, src: './assets/couple2.png', title: 'Melody & Dark' }
+        { id: 6, src: './assets/couple2.png', title: 'Missus & Dark' }
     ]
 };
 
