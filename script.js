@@ -25,7 +25,7 @@ const galleryData = { //upload the images here
         { id: 9, src: './assets/comm9.png', title: 'Faczki' },
         { id: 10, src: './assets/comm10.webp', title: 'q3mi' },
         { id: 11, src: './assets/comm11.png', title: 'Mechanical Matthew' },
-        { id: 13, src: './assets/pab.png', title: 'Pablito?' },
+        { id: 13, src: './assets/pab.png', title: 'LanTy' },
         { id: 14, src: './assets/vex.png', title: 'Vex' },
         { id: 15, src: './assets/comm13.png', title: 'Dark' },
         { id: 15, src: './assets/srfrogsen.png', title: 'SrFrogSen' }
