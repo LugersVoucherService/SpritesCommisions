@@ -27,7 +27,8 @@ const galleryData = { //upload the images here
         { id: 11, src: './assets/comm11.png', title: 'Mechanical Matthew' },
         { id: 13, src: './assets/pab.png', title: 'Pablito?' },
         { id: 14, src: './assets/vex.png', title: 'Vex' },
-        { id: 15, src: './assets/comm13.png', title: 'Dark' }
+        { id: 15, src: './assets/comm13.png', title: 'Dark' },
+        { id: 15, src: './assets/srfrogsen.png', title: 'SrFrogSen' }
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Pony' },
