@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✿ Sinny's Art Portfolio ✿</title>
+    <link rel="icon" type="image/x-icon" href="./assets/pfp.webp">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="./assets/fav.mp3" type="audio/mp3">
+    </audio>
+    <button id="musicToggle" class="music-toggle">
+        <i class="fas fa-volume-up"></i>
+    </button>
+    
+    <header class="hero">
+        <nav>
+            <div class="logo">✿ Sinny's Art ✿</div>
+            <ul>
+                <li><a href="#about"><i class="fas fa-heart"></i> About</a></li>
+                <li class="dropdown">
+                    <a href="#gallery">Gallery</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#commissions">✧ Commissions</a></li>
+                        <li><a href="#cute">✧ Ferociously cute!</a></li>
+                        <li><a href="#couples">✧ Couple o' hugs!</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="./assets/pfp.webp" alt="Artist Profile">
+            </div>
+            <div class="bio-content">
+                <h1 class="artist-name">Sinny</h1>
+                <p class="bio-text">
+                    Howdy, I'm sinny! I'm 22 and love to draw in my free time. I like drawing complicated things for experience :D
+                </p>
+                <div class="social-links">
+                    <a href="https://www.roblox.com/users/456378832/profile" class="social-link">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Roblox</span>
+                    </a>
+                    <a href="https://discordapp.com/users/335197526703603714" class="social-link">
+                        <i class="fab fa-discord"></i>
+                        <span>Discord</span>
+                    </a>
+                    <a href="https://x.com/sinnycrows/media" class="social-link">
+                        <i class="fab fa-x-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <h2>✧ Commission Prices ✧</h2>
+        <div class="price-cards">
+            <div class="price-card">
+                <h3>Basic Commission</h3>
+                <div class="price">
+                    <span class="usd">$8</span>
+                    <span class="robux">750 R$</span>
+                </div>
+                <p class="description">Single character artwork</p>
+            </div>
+            <div class="price-card">
+                <h3>Furry Drawing</h3>
+                <div class="price">
+                    <span class="usd">$12</span>
+                    <span class="robux">1000 R$</span>
+                </div>
+                <p class="description">Furry character artwork</p>
+            </div>
+            <div class="price-card">
+                <h3>Couple Drawing</h3>
+                <div class="price">
+                    <span class="usd">$15</span>
+                    <span class="robux">1200 R$</span>
+                </div>
+                <p class="description">Two character artwork</p>
+            </div>
+        </div>
+        <div class="price-notes">
+            <p>✧ Prices may vary based on complexity and additional details</p>
+            <p>✧ Client is responsible for Robux tax (30%)</p>
+            <p>✧ Please discuss specific requirements for accurate pricing</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div id="commissions" class="gallery-category">
+            <h2>Commissions</h2>
+            <p class="category-description">Purchase my digital goods for a low price! I'm always open to drawing something new and creative! I will always overcome any art challenges!! :D</p>
+            <div class="gallery-grid commissions-grid"></div>
+        </div>
+
+        <div id="cute" class="gallery-category">
+            <h2>Ferociously cute!</h2>
+            <p class="category-description">I'm new to drawing furries, so please be patient with me! I'm open to drawing for more experience.</p>
+            <div class="gallery-grid cute-grid"></div>
+        </div>
+
+        <div id="couples" class="gallery-category">
+            <h2>Couple o' hugs!</h2>
+            <p class="category-description">Commission your partner for a little extra fee!</p>
+            <div class="gallery-grid couples-grid"></div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html> 
