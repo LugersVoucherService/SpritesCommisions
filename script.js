@@ -29,6 +29,7 @@ const galleryData = { //upload the images here
         { id: 14, src: './assets/vex.png', title: 'Vex' },
         { id: 15, src: './assets/comm13.png', title: 'Dark' },
         { id: 15, src: './assets/srfrogsen.png', title: 'SrFrogSen' },
+        { id: 15, src: './assets/Untitled_-_March_13_2025_20.13.png', title: 'Luger' },
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
