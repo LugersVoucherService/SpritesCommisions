@@ -1,219 +1,151 @@
-function showLoadingAnimation(container) {
-    const loader = document.createElement('div');
-    loader.className = 'loader';
-    loader.innerHTML = '<div class="loader-heart"></div>';
-    container.appendChild(loader);
-}
-
-function removeLoadingAnimation(container) {
-    const loader = container.querySelector('.loader');
-    if (loader) {
-        loader.remove();
+const projects = [
+    {
+        title: "Luger's-VS",
+        description: "A vouching website for multiple roblox games. This website is built with HTML, CSS, JavaScript, and a custom API built in Python. This website features multiple well-designed pages which display different information you'd have to check out yourself from the link below.",
+        preview: "./assets/VoucherWS.png",
+        link: "https://lugers-vs.netlify.app/templates/",
+        video: "./assets/LugersVSShowcase.mp4",
+        price: "FREE ( Self-Made )",
+        duration: "1 week",
+        completionDate: "March 6th 2025",
+        maintenance: "Monthly checkups",
+        technologies: ["HTML", "CSS", "Javascript", "Python"]
+    },
+    {
+        title: "Sinny's Art Display",
+        description: "A art display website for a friend of mine. This website is built with HTML, CSS, and Javascript. The website features custom music, dynamic positioning for the art, commision prices, smooth animations, and more. This website was made for free and is customizable and user friendly.",
+        preview: "./assets/Sinny.png",
+        link: "https://sinnysart.netlify.app/",
+        video: "./assets/SinnysWSShowcase.mp4",
+        price: "PFP Art Commision",
+        duration: "1 day",
+        completionDate: "March 13th 2025",
+        maintenance: "None",
+        technologies: ["HTML", "CSS", "Javascript"]
+    },
+    {
+        title: "Vibranium",
+        description: "This website was made for my school to have some entertainment for the students. It was build using HTML, CSS, and Javascript. This website was a good haven for students to have fun but since I stopped updating it, the games and apps no longer work. Maybe in the future I'll update it so students can once again have their fun.",
+        preview: "./assets/Vibranium.png",
+        link: "https://vibranium.pages.dev/",
+        video: "./assets/VibraniumWSShowcase.mp4",
+        price: "FREE ( Self-Made )",
+        duration: "1 month",
+        completionDate: "Undefined",
+        maintenance: "Broken",
+        technologies: ["HTML", "CSS", "Javascript"]
     }
+];
+
+function videoopener(videoPath) {
+    const videoURL = new URL(videoPath, window.location.href).href;
+    const newTab = window.open('about:blank', '_blank');
+    newTab.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Website Demonstration</title>
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    background: #000;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100vh;
+                    overflow: hidden;
+                }
+                video {
+                    max-width: 100%;
+                    max-height: 100vh;
+                }
+                .video-container {
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="video-container">
+                <video controls autoplay>
+                    <source src="${videoURL}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </body>
+        </html>
+    `);
+    newTab.document.close();
 }
 
-const galleryData = { //upload the images here
-    commissions: [
-        { id: 1, src: './assets/coms2.webp', title: 'Sirstinkers' },
-        { id: 2, src: './assets/comm2.png', title: 'RedSasha01' },
-        { id: 3, src: './assets/comm3.webp', title: 'Edvariron' },
-        { id: 4, src: './assets/comm4.png', title: 'Sylven' },
-        { id: 5, src: './assets/comm5.png', title: 'FidelMar41' },
-        { id: 6, src: './assets/comm6.webp', title: 'Alec' },
-        { id: 7, src: './assets/comm7.png', title: 'AcceptableMarty' },
-        { id: 8, src: './assets/comm8.png', title: 'Kez' },
-        { id: 9, src: './assets/comm9.png', title: 'Faczki' },
-        { id: 10, src: './assets/comm10.webp', title: 'q3mi' },
-        { id: 11, src: './assets/comm11.png', title: 'Mechanical Matthew' },
-        { id: 13, src: './assets/pab.png', title: 'LanTy' },
-        { id: 14, src: './assets/vex.png', title: 'Vex' },
-        { id: 15, src: './assets/comm13.png', title: 'Dark' },
-        { id: 15, src: './assets/srfrogsen.png', title: 'SrFrogSen' },
-        { id: 15, src: './assets/Untitled_-_March_13_2025_20.13.png', title: 'Luger' }
-    ],
-    cute: [
-        { id: 3, src: './assets/furry.png', title: 'Muffin' },
-        { id: 4, src: './assets/furry2.png', title: 'Protogen' }
-    ],
-    couples: [
-        { id: 5, src: './assets/couple1.jpg', title: 'Sinny & Rollback' },
-        { id: 6, src: './assets/couple2.png', title: 'Missus & Dark' },
-        { id: 7, src: './assets/image_2025-03-14_235128811.png', title: 'Sinny&Rollback' } 
-    ],
-};
-
-const galleryGrid = document.querySelector('.gallery-grid');
-
-function createGalleryItems() {
-    Object.entries(galleryData).forEach(([category, items]) => {
-        const gridContainer = document.querySelector(`.${category}-grid`);
-        if (gridContainer) {
-            showLoadingAnimation(gridContainer);
-            
-            items.forEach(item => {
-                const galleryItem = document.createElement('div');
-                galleryItem.className = 'gallery-item';
-                
-                const img = new Image();
-                img.src = item.src;
-                
-                img.onload = function() {
-                    galleryItem.innerHTML = `
-                        <img src="${item.src}" alt="${item.title}" loading="lazy">
-                        <div class="item-overlay">
-                            <h3>${item.title}</h3>
-                        </div>
-                    `;
-                    
-                    galleryItem.addEventListener('click', () => showLightbox(item));
-                    gridContainer.appendChild(galleryItem);
-                    
-                    if (gridContainer.children.length === items.length + 1) {
-                        removeLoadingAnimation(gridContainer);
-                    }
-                };
-                
-                img.onerror = function() {
-                    console.error(`Failed to load image: ${item.src}`);
-                    if (gridContainer.children.length === items.length) {
-                        removeLoadingAnimation(gridContainer);
-                    }
-                };
-            });
-        }
-    });
-}
-
-function showLightbox(item) {
-    const lightbox = document.createElement('div');
-    lightbox.className = 'lightbox';
+function display_portfolio_websites() {
+    const container = document.querySelector('.projects-container');
     
-    const img = new Image();
-    img.src = item.src;
-    
-    lightbox.innerHTML = `
-        <div class="lightbox-content">
-            <div class="loader-heart"></div>
-        </div>
-    `;
-    
-    img.onload = function() {
-        const content = lightbox.querySelector('.lightbox-content');
-        content.innerHTML = `
-            <img src="${item.src}" alt="${item.title}">
-            <h3>${item.title}</h3>
+    projects.forEach((project, index) => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.style.animationDelay = `${index * 0.2}s`;
+        
+        card.innerHTML = `
+            <div class="project-preview">
+                <img src="${project.preview}" alt="${project.title}">
+            </div>
+            <div class="project-info">
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.description}</p>
+                <div class="tech-stack">
+                    ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+                </div>
+                <div class="project-details">
+                    <div class="detail-item">
+                        <i class="fas fa-money-bill"></i>
+                        <span>Price: ${project.price}</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Duration: ${project.duration}</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Completed: ${project.completionDate}</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tools"></i>
+                        <span>Maintenance: ${project.maintenance}</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="${project.link}" target="_blank" class="btn">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Website
+                    </a>
+                    ${project.video ? `
+                        <button onclick="videoopener('${project.video}')" class="btn">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
         `;
-    };
-    
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.classList.add('fade-out');
-            setTimeout(() => lightbox.remove(), 300);
-        }
+        
+        container.appendChild(card);
     });
-    
-    document.body.appendChild(lightbox);
 }
 
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    createGalleryItems();
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.add('fade-in');
-        observer.observe(section);
-    });
-});
-
-const style = document.createElement('style');
-style.textContent = `
-    .lightbox {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        cursor: pointer;
-    }
-    
-    .lightbox-content {
-        max-width: 90%;
-        max-height: 90vh;
-    }
-    
-    .lightbox-content img {
-        max-width: 100%;
-        max-height: 80vh;
-        object-fit: contain;
-    }
-    
-    .lightbox-content h3 {
-        color: white;
-        text-align: center;
-        margin-top: 1rem;
-    }
-    
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-
-document.head.appendChild(style);
-
-const bgMusic = document.getElementById('bgMusic');
-const musicToggle = document.getElementById('musicToggle');
-let isMusicPlaying = false;
-
-musicToggle.addEventListener('click', () => {
-    if (isMusicPlaying) {
-        bgMusic.pause();
-        musicToggle.classList.add('muted');
-    } else {
-        bgMusic.play();
-        musicToggle.classList.remove('muted');
-    }
-    isMusicPlaying = !isMusicPlaying;
-});
-
-document.addEventListener('click', () => {
-    if (!isMusicPlaying) {
-        bgMusic.volume = 0.2; 
-        bgMusic.play().catch(() => {
-            console.log('Autoplay prevented');
-        });
-        isMusicPlaying = true;
-    }
-}, { once: true });
+    display_portfolio_websites();
+}); 

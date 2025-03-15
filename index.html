@@ -3,127 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✿ Sinny's Art Portfolio ✿</title>
-    <link rel="icon" type="image/x-icon" href="./assets/pfp.webp">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+    <title>♱ Luger's Portfolio ރ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="./assets/pfp.png">
 </head>
 <body>
-    <audio id="bgMusic" loop>
-        <source src="./assets/fav.mp3" type="audio/mp3">
-    </audio>
-    <button id="musicToggle" class="music-toggle">
-        <i class="fas fa-volume-up"></i>
-    </button>
-    
+    <div class="floating-symbols">
+        <i class="fab fa-js-square" title="JavaScript"></i>
+        <i class="fab fa-python" title="Python"></i>
+        <i class="fab fa-html5" title="HTML5"></i>
+        <i class="fab fa-css3-alt" title="CSS3"></i>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg" alt="Lua" class="lua-icon" title="Lua/Luau">
+        <i class="fab fa-react" title="React"></i>
+        <i class="fab fa-node-js" title="Node.js"></i>
+    </div>
     <header class="hero">
-        <nav>
-            <div class="logo">✿ Sinny's Art ✿</div>
-            <ul>
-                <li><a href="#about"><i class="fas fa-heart"></i> About</a></li>
-                <li class="dropdown">
-                    <a href="#gallery">Gallery</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#commissions">✧ Commissions</a></li>
-                        <li><a href="#cute">✧ Ferociously cute!</a></li>
-                        <li><a href="#couples">✧ Couple o' hugs!</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about" class="about-section">
+        <div class="hero-wave"></div>
         <div class="profile-container">
             <div class="profile-image">
-                <img src="./assets/pfp.webp" alt="Artist Profile">
+                <div class="profile-frame">
+                    <img src="./assets/pfp.png" alt="Profile Picture" id="profile-pic">
+                    <div class="status-badge" data-status="unavailable">
+                        <span class="status-dot"></span>
+                        Not Open for Commissions
+                    </div>
+                </div>
+                <div class="profile-glow"></div>
             </div>
-            <div class="bio-content">
-                <h1 class="artist-name">Sinny</h1>
-                <p class="bio-text">
-                    Howdy, I'm sinny! I'm 22 and love to draw in my free time. I like drawing complicated things for experience :D
-                </p>
-                <div class="social-links">
-                    <a href="https://www.roblox.com/users/456378832/profile" class="social-link">
-                        <i class="fas fa-gamepad"></i>
-                        <span>Roblox</span>
-                    </a>
-                    <a href="https://discordapp.com/users/335197526703603714" class="social-link">
-                        <i class="fab fa-discord"></i>
-                        <span>Discord</span>
-                    </a>
-                    <a href="https://x.com/sinnycrows/media" class="social-link">
-                        <i class="fab fa-x-twitter"></i>
-                        <span>Twitter</span>
-                    </a>
-                    <a href="https://www.youtube.com/@PixelsSprite" class="social-link">
-                        <i class="fa-brands fa-youtube"></i>
-                        <span>Youtube</span>
-                    </a>
-                    <a href="https://ko-fi.com/spritewing" class="social-link">
-                        <i class="fa-solid fa-mug-hot"></i>
-                        <span>Ko-Fi</span>
+            <div class="profile-info">
+                <div class="header-content">
+                    <div class="name-badge">
+                        <h1>Luger</h1>
+                        <div class="badge-tag">Developer</div>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="stat">
+                            <i class="fas fa-code"></i>
+                            <span>3 Years Coding</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>3 Websites</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="tagline">Web Developer</p>
+                <div class="bio-container">
+                    <p class="bio">A <span id="age"></span> year old web developer who is self tought and has been coding for ~3 years. I make websites for fun and to learn new things about web development. I want to learn more to become a full stack web developer and this is the beginning of my goal.</p>
+                    <div class="skills-section">
+                        <div class="skills-category">
+                            <h3>Main Skills</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Luau</span>
+                            </div>
+                        </div>
+                        <div class="skills-category">
+                            <h3>Learning</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge learning">Node.js</span>
+                                <span class="tech-badge learning">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function myagebecauseimlazy() {
+                        const bd = new Date('2009-08-04');
+                        const todays_date = new Date();
+                        let myage = todays_date.getFullYear() - bd.getFullYear();
+                        const monthDiff = todays_date.getMonth() - bd.getMonth();
+                        if (monthDiff < 0 || (monthDiff === 0 && todays_date.getDate() < bd.getDate())) {
+                            myage--;
+                        }
+                        document.getElementById('age').textContent = myage;
+                    }
+                    myagebecauseimlazy();
+                </script>
+                <div class="contact-section">
+                    <div class="social-links">
+                        <a href="https://discord.com/users/1342744017305341962" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://x.com/WebDevLuger" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.roblox.com/users/1192873525/profile" class="social-link" title="Roblox"><i class="fas fa-gamepad"></i></a>
+                    </div>
+                    <a href="mailto:marshallnetworkmanager@gmail.com?subject=Website%20Commission%20Requirements&body=Dear%20Client%2C%0D%0A%0D%0ATo%20ensure%20the%20website%20meets%20your%20exact%20vision%2C%20please%20provide%20every%20minuscule%20detail%20regarding%20your%20commission.%20This%20includes%20but%20is%20not%20limited%20to%3A%0D%0A%0D%0A-Color%20Scheme%20%26%20Theme%3A%20Specify%20the%20primary%20and%20secondary%20colors%2C%20as%20well%20as%20any%20gradients%20or%20patterns.%0D%0A%0D%0A-Design%20%26%20Layout%3A%20Outline%20the%20structure%2C%20such%20as%20single-page%20or%20multi-page%2C%20section%20placements%2C%20and%20overall%20user%20experience.%0D%0A%0D%0A-Animations%20%26%20Effects%3A%20Mention%20any%20interactive%20elements%2C%20hover%20effects%2C%20transitions%2C%20or%20scrolling%20animations.%0D%0A%0D%0A-Images%20%26%20Graphics%3A%20Indicate%20any%20specific%20images%2C%20icons%2C%20or%20illustrations%20you%20want%20to%20be%20included.%20You%20may%20also%20attach%20example%20images%20for%20reference.%0D%0A%0D%0A-Pages%20%26%20Tabs%3A%20List%20all%20the%20necessary%20pages%20(e.g.%2C%20Home%2C%20About%2C%20Services%2C%20Contact%2C%20Blog%2C%20etc.)%20and%20their%20respective%20content%20structure.%0D%0A%0D%0A-Typography%3A%20Specify%20preferred%20fonts%20and%20text%20sizes%20for%20headings%2C%20subheadings%2C%20and%20body%20text.%0D%0A%0D%0A-Functional%20Features%3A%20Include%20any%20desired%20functionalities%20such%20as%20contact%20forms%2C%20booking%20systems%2C%20search%20bars%2C%20e-commerce%20capabilities%2C%20or%20user%20login%20portals.%0D%0A%0D%0A-Responsive%20Design%3A%20Indicate%20if%20the%20website%20should%20be%20optimized%20for%20mobile%2C%20tablet%2C%20and%20desktop%20devices.%0D%0A%0D%0AAdditional%20Notes%3A%20Any%20other%20specific%20requests%20or%20references%20that%20can%20help%20us%20better%20understand%20your%20vision.%0D%0A%0D%0AIf%20you%20have%20any%20example%20images%2C%20wireframes%2C%20or%20inspiration%20sources%2C%20feel%20free%20to%20attach%20them%20to%20this%20email%20for%20clarity.%0D%0A%0D%0ALooking%20forward%20to%20your%20detailed%20specifications.%0D%0A%0D%0ABest%20regards%2C%0D%0ALuger" class="contact-btn" id="contactBtn">
+                        <i class="fas fa-paper-plane"></i>
                     </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="pricing-section">
-        <h2>✧ Commission Prices ✧</h2>
-        <div class="price-cards">
-            <div class="price-card">
-                <h3>Basic Commission</h3>
-                <div class="price">
-                    <span class="usd">$8</span>
-                    <span class="robux">750 R$</span>
-                </div>
-                <p class="description">Single character artwork</p>
+    </header>
+    <main>
+        <section class="portfolio">
+            <h2>Commissioned Websites</h2>
+            <div class="projects-container">
             </div>
-            <div class="price-card">
-                <h3>Furry Drawing</h3>
-                <div class="price">
-                    <span class="usd">$12</span>
-                    <span class="robux">1000 R$</span>
-                </div>
-                <p class="description">Furry character artwork</p>
-            </div>
-            <div class="price-card">
-                <h3>Couple Drawing</h3>
-                <div class="price">
-                    <span class="usd">$15</span>
-                    <span class="robux">1200 R$</span>
-                </div>
-                <p class="description">Two character artwork</p>
-            </div>
-        </div>
-        <div class="price-notes">
-            <p>✧ Prices may vary based on complexity and additional details</p>
-            <p>✧ Client is responsible for Robux tax (30%)</p>
-            <p>✧ Please discuss specific requirements for accurate pricing</p>
-        </div>
-    </section>
-
-    <section id="gallery" class="gallery-section">
-        <div id="commissions" class="gallery-category">
-            <h2>Commissions</h2>
-            <p class="category-description">Purchase my digital goods for a low price! I'm always open to drawing something new and creative! I will always overcome any art challenges!! :D</p>
-            <div class="gallery-grid commissions-grid"></div>
-        </div>
-
-        <div id="cute" class="gallery-category">
-            <h2>Ferociously cute!</h2>
-            <p class="category-description">I'm new to drawing furries, so please be patient with me! I'm open to drawing for more experience.</p>
-            <div class="gallery-grid cute-grid"></div>
-        </div>
-
-        <div id="couples" class="gallery-category">
-            <h2>Couple o' hugs!</h2>
-            <p class="category-description">Commission your partner for a little extra fee!</p>
-            <div class="gallery-grid couples-grid"></div>
-        </div>
-    </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Luger's Portfolio. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
+    <script>
+        const statusBadge = document.querySelector('.status-badge');
+        const contactBtn = document.getElementById('contactBtn');
+
+        function canyouseeitornot() {
+            const status = statusBadge.getAttribute('data-status');
+            if (status === 'available') {
+                contactBtn.classList.remove('hidden');
+            } else {
+                contactBtn.classList.add('hidden');
+            }
+        }
+
+        canyouseeitornot();
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'data-status') {
+                    canyouseeitornot();
+                }
+            });
+        });
+
+        observer.observe(statusBadge, { attributes: true });
+    </script>
 </body>
-</html> 
+</html>
