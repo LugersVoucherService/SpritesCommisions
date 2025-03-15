@@ -39,7 +39,7 @@ const galleryData = { //upload the images here
         { id: 5, src: './assets/couple1.jpg', title: 'Sinny & Rollback' },
         { id: 6, src: './assets/couple2.png', title: 'Missus & Dark' }
         { id: 15, src: './assets/sinny&rollback.png', title: 'Sinny&Rollback' },
-    ]
+    ],
 };
 
 const galleryGrid = document.querySelector('.gallery-grid');
