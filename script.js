@@ -30,7 +30,6 @@ const galleryData = { //upload the images here
         { id: 15, src: './assets/comm13.png', title: 'Dark' },
         { id: 15, src: './assets/srfrogsen.png', title: 'SrFrogSen' },
         { id: 15, src: './assets/Untitled_-_March_13_2025_20.13.png', title: 'Luger' },
-        { id: 15, src: './assets/sinny&rollback.png', title: 'Sinny&Rollback' },
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
@@ -39,6 +38,7 @@ const galleryData = { //upload the images here
     couples: [
         { id: 5, src: './assets/couple1.jpg', title: 'Sinny & Rollback' },
         { id: 6, src: './assets/couple2.png', title: 'Missus & Dark' }
+        { id: 15, src: './assets/sinny&rollback.png', title: 'Sinny&Rollback' },
     ]
 };
 
