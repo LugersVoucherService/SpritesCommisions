@@ -30,7 +30,8 @@ const galleryData = { //upload the images here
         { id: 15, src: './assets/comm13.png', title: 'Dark' },
         { id: 16, src: './assets/srfrogsen.png', title: 'SrFrogSen' },
         { id: 17, src: './assets/Untitled_-_March_13_2025_20.13.png', title: 'Luger' },
-        { id: 18, src: './assets/eeve.png', title: 'Eeve' }
+        { id: 18, src: './assets/eeve.png', title: 'Eeve' },
+        { id: 19, src: './assets/sprite.png', title: 'Sprite' }
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
