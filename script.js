@@ -31,8 +31,8 @@ const galleryData = { //upload the images here
         { id: 16, src: './assets/srfrogsen.png', title: 'SrFrogSen' },
         { id: 17, src: './assets/Untitled_-_March_13_2025_20.13.png', title: 'Luger' },
         { id: 18, src: './assets/eeve.png', title: 'Eeve' },
-        { id: 19, src: './assets/sprite.png', title: 'Sprite' }
-        { id: 20, src: './assets/sprite.png', title: 'HimikoToga' ]
+        { id: 19, src: './assets/sprite.png', title: 'Sprite' },
+        { id: 20, src: './assets/sprite.png', title: 'HimikoToga' }
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
