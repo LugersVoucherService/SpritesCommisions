@@ -35,7 +35,10 @@ const galleryData = { //upload the images here
         { id: 20, src: './assets/himikotoga.png', title: 'Himiko Toga' },
         { id: 21, src: './assets/Sincroak.png', title: 'Sincroak' },
         { id: 22, src: './assets/Zuki.png', title: 'Zuki' },
-        { id: 23, src: './assets/Chop_ed.png', title: 'Chop_ed' }
+        { id: 23, src: './assets/Chop_ed.png', title: 'Chop_ed' },
+        { id: 23, src: './assets/Sincroak3.png', title: 'Sincroak v1' },
+        { id: 23, src: './assets/Sincroak4.png', title: 'Sincroak v2' },
+        { id: 23, src: './assets/Sincroak6.png', title: 'Sincroak v2.1' }
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
@@ -407,3 +410,4 @@ document.addEventListener('click', () => {
         isMusicPlaying = true;
     }
 }, { once: true });
+
