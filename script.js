@@ -33,7 +33,7 @@ const galleryData = { //upload the images here
         { id: 18, src: './assets/eeve.png', title: 'Eeve' },
         { id: 19, src: './assets/sprite.png', title: 'Sprite' },
         { id: 20, src: './assets/himikotoga.png', title: 'Himiko Toga' },
-        { id: 21, src: './assets/Sincroak.png', title: 'Sincroak' },
+        { id: 21, src: './assets/SincroakNosebleed.png', title: 'Sincroak' },
         { id: 22, src: './assets/Zuki.png', title: 'Zuki' },
         { id: 23, src: './assets/Chop_ed.png', title: 'Chop_ed' },
         { id: 24, src: './assets/SincroakBubbles.png', title: 'Sincroak v2' },
@@ -415,6 +415,7 @@ document.addEventListener('click', () => {
         isMusicPlaying = true;
     }
 }, { once: true });
+
 
 
 
