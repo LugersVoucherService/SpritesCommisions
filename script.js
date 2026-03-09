@@ -36,15 +36,16 @@ const galleryData = { //upload the images here
         { id: 21, src: './assets/Sincroak.png', title: 'Sincroak' },
         { id: 22, src: './assets/Zuki.png', title: 'Zuki' },
         { id: 23, src: './assets/Chop_ed.png', title: 'Chop_ed' },
-        { id: 23, src: './assets/Sincroak3.png', title: 'Sincroak v1' },
-        { id: 23, src: './assets/Sincroak4.png', title: 'Sincroak v2' },
-        { id: 23, src: './assets/Unclaimed-1.png', title: 'Unclaimed 01' },
-        { id: 23, src: './assets/SquirrelGirl.png', title: 'Unclaimed Rivals' },
-        { id: 23, src: './assets/Popular.png', title: 'Unclaimed 02' }
+        { id: 24, src: './assets/Sincroak3.png', title: 'Sincroak v1' },
+        { id: 25, src: './assets/Sincroak4.png', title: 'Sincroak v2' },
+        { id: 26, src: './assets/Unclaimed-1.png', title: 'Unclaimed 01' },
+        { id: 27, src: './assets/SquirrelGirl.png', title: 'Unclaimed Rivals' },
+        { id: 28, src: './assets/Popular.png', title: 'Unclaimed 02' }
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
         { id: 4, src: './assets/furry2.png', title: 'Protogen' }
+        { id: 5, src: './assets/ForVex2!.png', title: 'Vex' }
     ],
     couples: [
         { id: 5, src: './assets/couple1.jpg', title: 'Sinny & Rollback' },
@@ -413,6 +414,7 @@ document.addEventListener('click', () => {
         isMusicPlaying = true;
     }
 }, { once: true });
+
 
 
 
