@@ -44,7 +44,7 @@ const galleryData = { //upload the images here
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
-        { id: 4, src: './assets/furry2.png', title: 'Protogen' }
+        { id: 4, src: './assets/furry2.png', title: 'Protogen' },
         { id: 5, src: './assets/ForVex2!.png', title: 'Vex' }
     ],
     couples: [
@@ -414,6 +414,7 @@ document.addEventListener('click', () => {
         isMusicPlaying = true;
     }
 }, { once: true });
+
 
 
 
