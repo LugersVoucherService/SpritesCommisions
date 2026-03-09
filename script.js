@@ -38,7 +38,8 @@ const galleryData = { //upload the images here
         { id: 23, src: './assets/Chop_ed.png', title: 'Chop_ed' },
         { id: 23, src: './assets/Sincroak3.png', title: 'Sincroak v1' },
         { id: 23, src: './assets/Sincroak4.png', title: 'Sincroak v2' },
-        { id: 23, src: './assets/Unclaimed-1.png', title: 'Unclaimed 01' }
+        { id: 23, src: './assets/Unclaimed-1.png', title: 'Unclaimed 01' },
+        { id: 23, src: './assets/SquirrelGirl.png', title: 'Unclaimed Rivals' }
     ],
     cute: [
         { id: 3, src: './assets/furry.png', title: 'Muffin' },
@@ -411,6 +412,7 @@ document.addEventListener('click', () => {
         isMusicPlaying = true;
     }
 }, { once: true });
+
 
 
 
