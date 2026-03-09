@@ -37,7 +37,7 @@ const galleryData = { //upload the images here
         { id: 22, src: './assets/Zuki.png', title: 'Zuki' },
         { id: 23, src: './assets/Chop_ed.png', title: 'Chop_ed' },
         { id: 24, src: './assets/SincroakBubbles.png', title: 'Sincroak v2' },
-        { id: 25, src: './assets/Sincroak4.png', title: 'Sincroak v3' },
+        { id: 25, src: './assets/SincroakBat.png', title: 'Sincroak v3' },
         { id: 26, src: './assets/Unclaimed-1.png', title: 'Unclaimed 01' },
         { id: 27, src: './assets/SquirrelGirl.png', title: 'Unclaimed Rivals' },
         { id: 28, src: './assets/Popular.png', title: 'Unclaimed 02' },
@@ -415,6 +415,7 @@ document.addEventListener('click', () => {
         isMusicPlaying = true;
     }
 }, { once: true });
+
 
 
 
