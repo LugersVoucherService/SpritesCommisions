@@ -52,7 +52,7 @@ const galleryData = { //upload the images here
         { id: 5, src: './assets/couple1.jpg', title: 'Sinny & Rollback' },
         { id: 6, src: './assets/couple2.png', title: 'Missus & Dark' },
         { id: 7, src: './assets/image_2025-03-14_235128811.png', title: 'Sinny & Rollback v2' },
-        { id: 7, src: './assets/BriNTori.png', title: 'Bri & Tori' } 
+        { id: 8, src: './assets/BriNTori.png', title: 'Bri & Tori' } 
     ],
 };
 
@@ -415,6 +415,7 @@ document.addEventListener('click', () => {
         isMusicPlaying = true;
     }
 }, { once: true });
+
 
 
 
